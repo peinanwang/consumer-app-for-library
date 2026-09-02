@@ -1,0 +1,116 @@
+/* The app's own styles. The library contributes only the --cui-* tokens. */
+
+:root {
+  color-scheme: light;
+  font-family: var(--cui-font-family);
+  background-color: var(--cui-color-bg);
+  color: var(--cui-color-text);
+}
+
+:root:has([data-cui-theme='dark']),
+[data-cui-theme='dark'] {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cui-color-bg);
+  color: var(--cui-color-text);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--cui-color-border);
+  margin-bottom: 28px;
+}
+
+.appTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.appSubtitle {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--cui-color-text-muted);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionHeading {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cui-color-text-muted);
+  margin: 0 0 4px;
+}
+
+.sectionNote {
+  font-size: 13px;
+  color: var(--cui-color-text-muted);
+  margin: 0 0 14px;
+  max-width: 70ch;
+  line-height: 1.55;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.split {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.panel {
+  min-width: 280px;
+  flex: 1;
+  padding: 16px;
+  border: 1px dashed var(--cui-color-border-strong);
+  border-radius: var(--cui-radius-lg);
+  font-size: 13px;
+}
+
+.statRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 2px 0;
+}
+
+.statLabel {
+  color: var(--cui-color-text-muted);
+}
+
+.muted {
+  color: var(--cui-color-text-muted);
+}
+
+code {
+  font-family: var(--cui-font-family-mono);
+  font-size: 0.9em;
+  background: var(--cui-color-bg-subtle);
+  padding: 1px 5px;
+  border-radius: var(--cui-radius-sm);
+}
